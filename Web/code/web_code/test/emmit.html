@@ -1,0 +1,82 @@
+<!-- Emmit : tab : ctrl + space -->
+<!-- html 코드를 간단하게 만들어 주는 문법 -->
+
+<!-- '>' : 하위 레벨 태그 생성 -->
+<!-- p>span -->
+<p><span></span></p>
+
+<!-- '+' : 같은 레벨 태그 생성 -->
+<!-- p+span -->
+<p></p>
+<span></span>
+
+<!-- '()' : 태그 묶음 -->
+<!-- (p+span)+(p+span) -->
+<p></p>
+<span></span>
+<p></p>
+<span></span>
+
+<!-- '^' : 상위 엘리먼트로 이동 -->
+<!-- p>span^div -->
+<p><span></span></p>
+<div></div>
+
+<!-- ':' : type 속성 -->
+<!-- input:text -->
+<input type="text" name="" id="">
+
+<!-- # : 아이디, . : 클래스 -->
+<!-- p#no.no1>span.no2 -->
+<p id="no" class="no1"><span class="no2"></span></p>
+
+<!-- '*' : 반복해서 태그 생성 -->
+<!-- ul>li.data*3 -->
+<ul>
+    <li class="data"></li>
+    <li class="data"></li>
+    <li class="data"></li>
+</ul>
+
+<!-- '$' : 순번 사용 -->
+<!-- ul>li.data$*3 -->
+<ul>
+    <li class="data1"></li>
+    <li class="data2"></li>
+    <li class="data3"></li>
+</ul>
+
+<!-- '@' : 순번 시작 번호 설정 -->
+<!-- ul>li.data$@6*3 -->
+<ul>
+    <li class="data6"></li>
+    <li class="data7"></li>
+    <li class="data8"></li>
+</ul>
+
+<!-- '{}' : 문자열 입력 -->
+<!-- ul>li.data$@6{no$}*3 -->
+<ul>
+    <li class="data6">no1</li>
+    <li class="data7">no2</li>
+    <li class="data8">no3</li>
+</ul>
+
+<!-- '[]' : 속성값 입력 -->
+<!-- a[href=https://kt.com]{kt 페이지 이동} -->
+<a href="https://kt.com">kt 페이지 이동</a>
+
+<!-- example -->
+<!-- div#page>nav.nav$>ul>li.no${item$@0}*3 -->
+<!-- div#page>nav.nav$>ul>li.no${item$$@0}*3 -->
+<div id="page">
+    <nav class='nav1'>
+        <ul>
+            <li class="no1">item0</li>
+            <li class="no2">item1</li>
+            <li class="no3">item2</li>
+        </ul>
+    </nav>
+</div>
+
+
